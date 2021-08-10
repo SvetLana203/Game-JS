@@ -5,7 +5,7 @@ flipCard = () => {
   cardsAll.classList.toggle('flip') ///????
 }
 
-cardsAll.forEach((card) => card.addEventListener('click', flipCard))
+cardsAll.forEach((card) => card.addEventListener('click', flipCard()))
 
 //   cardMatches = () => {
 //  if()
