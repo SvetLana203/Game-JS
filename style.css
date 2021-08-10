@@ -1,0 +1,19 @@
+
+h1 {
+  text-align: center;
+}
+.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  align-content: space-between;
+  margin: 15px;
+  padding: 10px;
+  
+}
+img {
+  width: 100px;
+  height:100px;
+}
