@@ -1,38 +1,103 @@
 
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+} 
+
 h1 {
   text-align: center;
 }
 
+body {
+  height: 100vh;
+  display: flex;
+  background: green;
+}
 
-.cards {
+.game {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap; 
+  perspective: 1000px;
+  
+}
+
+.a_card {
+  width: calc(25% - 10px);
+  height: calc(33.333% - 10px);
+  margin: 5px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  box-shadow: 1px 1px 1px rgba(0,0,0,.3);
+}
+
+
+.a_card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+
+.card, .back {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  backface-visibility: hidden;
+  background: orange;
+  border-radius: 5px;
+  
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+
+.a_card.flip {
+  transform: rotateY(180deg);
+}  
+
+
+.card {
+  transform: rotateY(180deg);
+}
+
+
+
+
+
+
+
+
+/* .cards {
   display: inline-grid;
   grid-template-columns: auto auto auto auto;
   margin: 40px;
   padding: 10px;
   grid-gap: 5px;
-  /* position: relative;  */
-}
+  /* position: relative;   */
+/* } */ 
 
-img {
+/* img {
   width: 100px;
   height:100px;
-}
+} */
 
 
-.card,
-.back-card {
+/* .card {
   width:100%;
   height:100%;
-  backface-visibility: hidden;
-  /* position: absolute; */
- } 
+  /* backface-visibility: hidden; */
+  /* position: absolute;  */
+  /* background-color: red; */
+ /* } / */ 
 
-/* 
-.flip{
-  transform: rotateX(180deg);
-  
-} 
-.cards {
-  transition:transform 2s ;
-  transform-style: preserve-3d;
-} */
+
+ 
