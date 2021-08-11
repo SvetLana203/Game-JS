@@ -24,9 +24,10 @@ img {
   width:100%;
   height:100%;
   backface-visibility: hidden;
-  position: absolute; } 
+  /* position: absolute; */
+ } 
 
-
+/* 
 .flip{
   transform: rotateX(180deg);
   
@@ -34,4 +35,4 @@ img {
 .cards {
   transition:transform 2s ;
   transform-style: preserve-3d;
-}
+} */
