@@ -23,6 +23,12 @@ cardsAll.forEach((card, index) =>
 console.log(flipCard)
 
 ///////matching cards//////
+const freezeCards = (card) => {
+  card.removeEventListener('click', flipCard)
+  console.log('card', card)
+  // cardSecond.removeEventListener('click', flipCard)
+}
+const flipBack = (card) => {}
 
 const cardMatches = (card) => {
   if (!cardFirst) {
@@ -33,28 +39,24 @@ const cardMatches = (card) => {
     console.log('second card clicked')
     if (cardFirst === cardSecond) {
       console.log('Match')
-      freezeCards(card)
+      freezeCards(card) // cards must stay opened if match
       cardFirst = null // reset// we are not comparing any cards
       cardSecond = null
     } else {
-      console.log(' Cards are not matched')
-      //
+      console.log('Cards are not matched')
+      flipBack(card) // cards must flip back if not match
       cardFirst = null
       cardSecond = null
     }
   }
-}
-const freezeCards = (card) => {
-  card.removeEventListener('click', flipCard)
-  // cardSecond.removeEventListener('click', flipCard)
 }
 
 /////shuffling cards////
 
 shuffleCard = () => {
   cardsAll.forEach((card) => {
-    let ramdomPos = Math.floor(Math.random() * 12)
-    card.style.order = ramdomPos
+    let random = Math.floor(Math.random() * 12)
+    card.style.order = random
   })
 }
 shuffleCard()
