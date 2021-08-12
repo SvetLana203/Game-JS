@@ -12,39 +12,46 @@ function flipCard(card) {
 
 cardsAll.forEach((card, index) =>
   card.addEventListener('click', () => {
-    flipCard(card)
-    // cardArray.push(card.getAttribute('value'))
+    if (card.classList.contains('finished')) {
+    } else {
+      flipCard(card)
+      // cardArray.push(card.getAttribute('value'))
 
-    console.log(card.getAttribute('value'))
-    console.log(cardArray)
-    cardMatches(card)
+      console.log(card.getAttribute('value'))
+      console.log(cardArray)
+      cardMatches(card)
+    }
   })
 )
 console.log(flipCard)
 
 ///////matching cards//////
 const freezeCards = (card) => {
-  card.removeEventListener('click', flipCard)
+  card.classList.add('finished')
+
   console.log('card', card)
-  // cardSecond.removeEventListener('click', flipCard)
+  //cardSecond.removeEventListener('click', flipCard(card))
 }
 const flipBack = (card) => {}
 
 const cardMatches = (card) => {
   if (!cardFirst) {
     console.log('first card clicked')
-    cardFirst = card.getAttribute('value')
+    cardFirst = card
   } else {
-    cardSecond = card.getAttribute('value')
+    cardSecond = card
     console.log('second card clicked')
-    if (cardFirst === cardSecond) {
+    if (cardFirst.getAttribute('value') === cardSecond.getAttribute('value')) {
       console.log('Match')
-      freezeCards(card) // cards must stay opened if match
+      freezeCards(cardFirst)
+      freezeCards(cardSecond)
+      //freezeCards(cardSecond) // cards must stay opened if match
       cardFirst = null // reset// we are not comparing any cards
       cardSecond = null
     } else {
       console.log('Cards are not matched')
-      flipBack(card) // cards must flip back if not match
+      setTimeout(flipCard(cardFirst), 3000)
+      setTimeout(flipCard(cardSecond), 3000) // cards must flip back if not match
       cardFirst = null
       cardSecond = null
     }
