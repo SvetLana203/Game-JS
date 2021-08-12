@@ -30,9 +30,7 @@ const freezeCards = (card) => {
   card.classList.add('finished')
 
   console.log('card', card)
-  //cardSecond.removeEventListener('click', flipCard(card))
 }
-const flipBack = (card) => {}
 
 const cardMatches = (card) => {
   if (!cardFirst) {
@@ -45,15 +43,19 @@ const cardMatches = (card) => {
       console.log('Match')
       freezeCards(cardFirst)
       freezeCards(cardSecond)
-      //freezeCards(cardSecond) // cards must stay opened if match
+      // cards must stay opened if match
       cardFirst = null // reset// we are not comparing any cards
       cardSecond = null
     } else {
       console.log('Cards are not matched')
-      setTimeout(flipCard(cardFirst), 3000)
-      setTimeout(flipCard(cardSecond), 3000) // cards must flip back if not match
-      cardFirst = null
-      cardSecond = null
+      setTimeout(function () {
+        flipCard(cardFirst)
+        cardFirst = null
+      }, 1250)
+      setTimeout(function () {
+        flipCard(cardSecond)
+        cardSecond = null
+      }, 1250) // cards must flip back if not match
     }
   }
 }
