@@ -51,5 +51,10 @@ const freezeCards = (card) => {
 
 /////shuffling cards////
 
-// Math.floor(Math.random() * ???)
-//
+shuffleCard = () => {
+  cardsAll.forEach((card) => {
+    let ramdomPos = Math.floor(Math.random() * 12)
+    card.style.order = ramdomPos
+  })
+}
+shuffleCard()
