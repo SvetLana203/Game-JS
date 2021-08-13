@@ -16,11 +16,16 @@
 }
 @keyframes pulse {
   0% {
-    background-color: #001F3F;
+    background-color: #219ebc;
   }
   100% {
-    background-color: #FF4136;
+    background-color: #f4acb7;
   }
+}
+
+li {
+  font-family: "cookiss", serif;
+  font-size: 40px;
 }
 
 body {
@@ -28,7 +33,7 @@ body {
   display: flex;
   flex-direction:column;
   justify-content: center;
-  background-color: green;
+  background-color: #0abab5;
 }
 
 @font-face {
@@ -84,7 +89,7 @@ text-decoration: none;
   height: 100%;
   padding: 20px;
   position: absolute;
-  background: orange;
+  background: #fb8500;
   border-radius: 5px;
 }
 
