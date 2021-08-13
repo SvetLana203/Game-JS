@@ -26,9 +26,9 @@ cardsAll.forEach((card, index) =>
 console.log(flipCard)
 
 ///////matching cards//////
+
 const freezeCards = (card) => {
   card.classList.add('finished')
-
   console.log('card', card)
 }
 
@@ -51,7 +51,7 @@ const cardMatches = (card) => {
       setTimeout(function () {
         flipCard(cardFirst)
         cardFirst = null
-      }, 1250)
+      }, 1000)
       setTimeout(function () {
         flipCard(cardSecond)
         cardSecond = null
