@@ -1,5 +1,4 @@
 
-
 * {
   padding: 0;
   margin: 0;
@@ -108,7 +107,6 @@ img{
 .a_card.flip {
   transform: rotateY(180deg);
 }  
-
 
 .card {
   transform: rotateY(180deg);

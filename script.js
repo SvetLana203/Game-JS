@@ -15,8 +15,6 @@ cardsAll.forEach((card, index) =>
     if (card.classList.contains('finished')) {
     } else {
       flipCard(card)
-      // cardArray.push(card.getAttribute('value'))
-
       console.log(card.getAttribute('value'))
       console.log(cardArray)
       cardMatches(card)
@@ -25,7 +23,7 @@ cardsAll.forEach((card, index) =>
 )
 console.log(flipCard)
 
-///////matching cards//////
+///////matching cards///////
 
 const freezeCards = (card) => {
   card.classList.add('finished')
@@ -42,11 +40,11 @@ const cardMatches = (card) => {
     if (cardFirst.getAttribute('value') === cardSecond.getAttribute('value')) {
       console.log('Match')
       freezeCards(cardFirst)
-      freezeCards(cardSecond)
-      // cards must stay opened if match
+      freezeCards(cardSecond) // cards must stay opened if match
       cardFirst = null // reset// we are not comparing any cards
       cardSecond = null
     } else {
+      // cards must flip back if not match
       console.log('Cards are not matched')
       setTimeout(function () {
         flipCard(cardFirst)
@@ -55,12 +53,12 @@ const cardMatches = (card) => {
       setTimeout(function () {
         flipCard(cardSecond)
         cardSecond = null
-      }, 1250) // cards must flip back if not match
+      }, 1250)
     }
   }
 }
 
-/////shuffling cards////
+/////shuffling cards/////
 
 shuffleCard = () => {
   cardsAll.forEach((card) => {

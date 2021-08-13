@@ -27,11 +27,11 @@ The player needs to match each pair of cards to win the game.
 A Trello board was used to keep track of development progress and can be viewed
 [here](https://trello.com/b/YBfECx4z/simple-project-board)
 
-The project was deployed on Surge and can be viewed [here](file:///Users/svetlanashirapova/ga_seir/unit1/project1/Game-JS/index.html)
+The project was deployed on Surge and can be viewed [here](memory-gameSS.surge.sh)
 
 ***Screenshots***
 
-![game]()
+![game](memorygame.png)
 
 
 ***Future Updates***
@@ -61,6 +61,8 @@ Images: [Pinterest](https://www.pinterest.com/shirapovauu/_saved/)
 Font: [Cookiss](https://www.dafont.com/cookiss.font)
 
 Animation: [Animate.css](https://www.youjiadain.com/)
+
+Color: [Coolors](https://coolors.co/palettes/popular)
 
 
 
